@@ -1,0 +1,19 @@
+name: CI/CD
+
+on:
+  pull_request:
+    branches: [master]
+  push:
+    branches: [master]
+
+jobs:
+  pipeline:
+    uses: PrintNow-Dev/PrintNow/.github/workflows/templates/backend.yml@dev
+
+    with:
+      service: "user-service"
+      image: "ghcr.io/YOUR_ORG/user-service"
+      sonar_key: "user-service"
+      trigger: ${{ github.event_name }}
+
+    secrets: inherit
