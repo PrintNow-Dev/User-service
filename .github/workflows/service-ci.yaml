@@ -12,7 +12,7 @@ jobs:
 
     with:
       service: "user-service"
-      image: "ghcr.io/YOUR_ORG/user-service"
+      image: "ghcr.io/printnow-dev/user-service"
       sonar_key: "user-service"
       trigger: ${{ github.event_name }}
 
