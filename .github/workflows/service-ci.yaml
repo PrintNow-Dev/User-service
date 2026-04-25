@@ -15,4 +15,5 @@ jobs:
       image: "ghcr.io/printnow-dev/user-service"
       trigger: ${{ github.event_name }}
 
-    secrets: inherit
+    secrets: 
+      SONAR_KEY: ${{ secrets.SONAR_KEY }}
