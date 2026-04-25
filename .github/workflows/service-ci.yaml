@@ -8,7 +8,7 @@ on:
 
 jobs:
   pipeline:
-    uses: PrintNow-Dev/PrintNow/.github/workflows/templates/backend.yml@dev
+    uses: PrintNow-Dev/PrintNow/.github/workflows/templates/backend.yaml@dev
 
     with:
       service: "user-service"
